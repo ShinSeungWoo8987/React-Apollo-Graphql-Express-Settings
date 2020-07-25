@@ -2,14 +2,18 @@ import React from 'react';
 import {ApolloProvider} from "react-apollo";
 import client from './components/apolloClient';
 import './App.css';
-import Home from './components/Home';
+import GetData from './components/GetData';
+import DataStore from './components/DataStore';
 
 function App() {
+  
   return (
-    <ApolloProvider client={client}>
-      <div>Client</div>
-      <Home/>
-    </ApolloProvider>
+    <DataStore>
+      <ApolloProvider client={client}>
+        <div>Client</div>
+          <GetData/>
+      </ApolloProvider>
+    </DataStore>
   );
 }
 

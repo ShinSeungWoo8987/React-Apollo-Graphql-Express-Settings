@@ -1,5 +1,5 @@
 import gql from 'graphql-tag';
-export const HOME_PAGE = gql`
+export const GET_DATA = gql`
     query{
         hello
     }
